@@ -34,5 +34,12 @@ const PersonIcon= ({ icon }: { icon: string }) => {
         </div>
     );
 }
+const CardIcon= ({ icon }: { icon: string }) => {
+    return (
+        <div className="flex justify-center items-center ">
+            <Icon icon={icon} width="106" height="106" className="text-[#7C3785] "/>
+        </div>
+    );
+}
 
-export { NavIcon,EyeIcon,GreaterIcon, PersonIcon};
+export { NavIcon,EyeIcon,GreaterIcon, PersonIcon,CardIcon};
