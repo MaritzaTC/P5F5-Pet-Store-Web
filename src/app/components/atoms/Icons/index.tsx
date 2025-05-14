@@ -41,5 +41,17 @@ const CardIcon= ({ icon }: { icon: string }) => {
         </div>
     );
 }
+const CardIconImg= ({ url }: { url: string }) => {
+    return (
+        <Image
+        src={url}        
+        alt="cards icons"
+        width={106}
+        height={106}
+      />
+    );
+}
 
-export { NavIcon,EyeIcon,GreaterIcon, PersonIcon,CardIcon};
+
+
+export { NavIcon,EyeIcon,GreaterIcon, PersonIcon,CardIcon,CardIconImg};

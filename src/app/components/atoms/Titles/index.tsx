@@ -2,7 +2,7 @@ import React from 'react'
 
 const TextTitleName = ({text}: {text: string}) => {
     return (
-        <h1 className='ml-20 text-[48px] font-bold text-white '>
+        <h1 className=' text-[48px] font-bold text-white '>
            {text}
         </h1>
     );
