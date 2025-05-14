@@ -1,10 +1,10 @@
 import Navbar from '@/app/components/molecules/Navbar/index';
 const MainLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div>
+    <div className='w-screen min-h-screen overflow-x-hidde'>
          <Navbar></Navbar>
-      <main>{children}</main> 
-     
+      <main className='w-full'>{children}</main> 
+      
     </div>
   );
 };
