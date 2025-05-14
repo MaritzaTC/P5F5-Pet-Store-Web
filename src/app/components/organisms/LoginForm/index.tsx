@@ -18,9 +18,10 @@ export default function Index() {
                 <form className='flex flex-col gap-4 mt-10'>
                    <InputText type="text" placeholder="Nombre" iconRight="tabler:user" />
                     <InputText type={'password'} placeholder='Contraseña'></InputText>
-                    
-                    <ButtonRounded text='Iniciar sesión' className='bg-[#7C3785]  text-white mt-6' ></ButtonRounded>
-                    <Link href={'/login'} >
+                    <Link href={'/adminpromotions'}>
+                    <ButtonRounded text='Iniciar sesión' className='bg-[#7C3785] w-[300px]  text-white mt-6' ></ButtonRounded>
+                    </Link>
+                    <Link href={'/register'} >
                     <ButtonRounded text='Registrarse' className='bg-white w-[300px] text-[#7C3785] border-[#7C3785] border-1'></ButtonRounded>
                     </Link>
                 </form>
