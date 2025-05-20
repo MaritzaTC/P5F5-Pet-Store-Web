@@ -7,9 +7,10 @@ interface DropdownProps {
     value: string;
     onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
     className?: string;
+     placeholder?: string; 
 }
 
-export const Dropdown: React.FC<DropdownProps> = ({ label, name, options, value, onChange, className = '' }) => {
+export const Dropdown: React.FC<DropdownProps> = ({ label, name, options, value, onChange, className = '', placeholder }) => {
     return (
         <div className={`flex flex-col ${className}`}>
             <TextRegular text={label}></TextRegular>
@@ -21,7 +22,7 @@ export const Dropdown: React.FC<DropdownProps> = ({ label, name, options, value,
                 required
                 className="border-1 border-[#E4E4E7] rounded-md p-2  focus:border-[#7C3785]  outline-none"
             >
-                <option value="">Seleccionar </option>
+              <option value="">{placeholder || 'Seleccionar'}</option>
                 {options.map((opt) => (
                     <option key={opt} value={opt}>
                         {opt}
