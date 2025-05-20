@@ -5,7 +5,7 @@ import { TextRegular7} from '../../atoms/Titles'
 
 const CreateInput = ({text}: {text: string}) => {
     return (
-        <div className='flex flex-col w-full max-w-md'>
+        <div className='flex items-center gap-4 w-full max-w-md'>
             <TextRegular7 text={text}></TextRegular7>
             <input
             type='text'
