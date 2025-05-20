@@ -19,15 +19,14 @@ export default function index() {
                 <GreaterIcon></GreaterIcon>
                 <TextRegular2 text='Promociones'></TextRegular2>
                 <GreaterIcon></GreaterIcon>
-                <TextRegular text='Crear'></TextRegular>
+                <TextRegular text='Crear por Categoría '></TextRegular>
             </div>
             <div className='flex gap-4 ml-20 px-2 mt-6 mb-8 ' >  <div className='flex flex-col px-4 mt-6 '>
                     <TextTitle text='Crear Promoción por Categoría'></TextTitle>
-                    
                 <form className='flex flex-col gap-4 mt-10 justify-between'>
                     <div className='flex items-center gap-4 w-full max-w-md'>
                            <TextRegular7 text='Categoría'></TextRegular7>
-                     <Dropdown className='w-[266px]' label={''} name={selectedOption} options={['Administrador', 'Gestor de promociones', 'Lector']} value={selectedOption} onChange={(e) => setSelectedOption(e.target.value)} ></Dropdown>
+                     <Dropdown className='w-[266px]' label={''} name={selectedOption} options={['Alimentos y nutrición', ' Higiene y cuidado', 'Juguetes y entretenimiento', 'Accesorios','Salud y bienestar','Hogar y control de olores']} value={selectedOption} onChange={(e) => setSelectedOption(e.target.value)} ></Dropdown>
                     </div>
                     <CreateInput text='Nombre'></CreateInput>
                     <CreateInput text='Producto'></CreateInput>
