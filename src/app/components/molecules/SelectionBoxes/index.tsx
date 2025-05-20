@@ -7,5 +7,12 @@ const CreateBox = ({ children }: { children?: ReactNode }) => {
     </div>
   );
 };
+const CreateBox2 = ({ children }: { children?: ReactNode }) => {
+  return (
+    <div className='relative w-[512px] h-[208px] border-[1px] border-[#E4E4E7] rounded-[8px] p-4'>
+      {children}
+    </div>
+  );
+};
 
-export { CreateBox };
+export { CreateBox,CreateBox2 };

@@ -32,7 +32,7 @@ const cardData = [
     {
         title: 'Lista de Borradores',
         icon: '/tabler-icon-eraser.png',
-         href: '/promotionbycategory',
+         href: '/eraserlist',
     }
 ]
 
