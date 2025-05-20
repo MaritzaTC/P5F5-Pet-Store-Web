@@ -50,6 +50,7 @@ const TextRegular4 = ({text}: {text: string}) => {
         </h1>
     );
 };
+
 const TextRegular5 = ({text}: {text: string}) => {
     return (
         <h1 className='text-[19px] font-semibold  text-[#71717A]  '>
@@ -57,6 +58,8 @@ const TextRegular5 = ({text}: {text: string}) => {
         </h1>
     );
 };
+
+
 const TextRegular6 = ({ text }: { text: string }) => {
   return (
     <h1 className="relative inline-block text-[15px] font-semibold text-[#71717A]">
@@ -65,5 +68,12 @@ const TextRegular6 = ({ text }: { text: string }) => {
     </h1>
   );
 };
+const TextRegular7 = ({text}: {text: string}) => {
+    return (
+        <h1 className='text-[15px] font-normal'>
+           {text}
+        </h1>
+    );
+};
 
-export  {TextTitleName, TextTitle,TextTitle2, TextRegular,TextRegular2,TextRegular3,TextRegular4,TextRegular5,TextRegular6}
+export  {TextTitleName, TextTitle,TextTitle2, TextRegular,TextRegular2,TextRegular3,TextRegular4,TextRegular5,TextRegular6,TextRegular7}

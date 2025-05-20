@@ -4,7 +4,6 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
     <div className='w-screen min-h-screen overflow-x-hidde'>
          <Navbar></Navbar>
       <main className='w-full'>{children}</main> 
-      
     </div>
   );
 };

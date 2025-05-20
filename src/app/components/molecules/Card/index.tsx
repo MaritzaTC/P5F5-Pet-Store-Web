@@ -6,6 +6,7 @@ const cardData = [
     {
         title: 'Crear Promoción Simple',
         icon: '/tabler-icon-calendar-plus.png',
+        href: '',
     },
     {
         title: 'Crear Promoción Por Categoria',
