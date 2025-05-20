@@ -30,4 +30,12 @@ const ButtonCard = ({ text, className }: { text: string; className?: string }) =
   );
 }
 
-export { ButtonRounded,ButtonRounded2,ButtonRounded3,ButtonCard};
+const ButtonCard2 = ({ text, className }: { text: string; className?: string }) => {
+  return (
+    <button className={`rounded-[8px] font-bold text-[14px]  w-[84px] h-[36px] text-[#858484] border-[#E4E4E7] border-1 ${className ?? ''}`}>
+      {text}
+    </button>
+  );
+}
+
+export { ButtonRounded,ButtonRounded2,ButtonRounded3,ButtonCard,ButtonCard2};
