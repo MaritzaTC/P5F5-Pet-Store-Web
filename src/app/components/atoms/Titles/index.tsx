@@ -70,7 +70,7 @@ const TextRegular6 = ({ text }: { text: string }) => {
 };
 const TextRegular7 = ({text}: {text: string}) => {
     return (
-        <h1 className='text-[15px] font-normal'>
+        <h1 className='text-[15px] font-normal w-[100px]'>
            {text}
         </h1>
     );

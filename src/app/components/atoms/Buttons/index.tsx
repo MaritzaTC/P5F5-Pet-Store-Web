@@ -17,7 +17,7 @@ const ButtonRounded2 = ({ text, className }: { text: string; className?: string 
 }
 const ButtonRounded3 = ({ text, className }: { text: string; className?: string }) => {
   return (
-    <button   className={`rounded-[6px] font-normal text-[14px] w-[119px] h-[40px]  ${className ?? ''}`}>
+    <button  className={`rounded-[6px] font-normal text-[14px] w-[119px] h-[40px]  ${className ?? ''}`}>
       {text}
     </button>
   );
