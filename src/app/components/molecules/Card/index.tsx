@@ -27,7 +27,7 @@ const cardData = [
     {
         title: 'Lista de Promociones',
         icon: '/tabler-icon-list-details.png',
-         href: '/promotionbycategory',
+         href: '/listpromotions',
     },
     {
         title: 'Lista de Borradores',
