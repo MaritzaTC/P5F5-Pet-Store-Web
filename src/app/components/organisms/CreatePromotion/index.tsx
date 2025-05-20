@@ -19,7 +19,7 @@ const index = () => (
                 <TextRegular text='Crear'></TextRegular>
             </div>
             <div className='flex gap-4 ml-20 px-2 mt-6 mb-8 ' > 
-                    <TextTitle text='Crear Promoxción'></TextTitle>
+                    <TextTitle text='Crear Promoción'></TextTitle>
                      <div className='flex flex-col px-4 mt-6 '>
                 <form className='flex flex-col gap-4 mt-10 justify-between'>
                     <CreateInput text='Nombre'></CreateInput>
