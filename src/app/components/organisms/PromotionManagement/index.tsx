@@ -1,5 +1,5 @@
 import React from 'react'
-import { TextRegular, TextRegular2, TextTitle, TextTitle2 } from '../../atoms/Titles'
+import { TextRegular, TextRegular2, TextTitle2 } from '../../atoms/Titles'
 import { GreaterIcon } from '../../atoms/Icons';
 import { CreateBox } from '../../molecules/SelectionBoxes';
 
