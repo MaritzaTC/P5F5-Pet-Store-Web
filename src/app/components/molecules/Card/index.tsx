@@ -6,27 +6,32 @@ const cardData = [
     {
         title: 'Crear Promoción Simple',
         icon: '/tabler-icon-calendar-plus.png',
-        href: '',
+        href: '/simplepromotion',
     },
     {
         title: 'Crear Promoción Por Categoria',
         icon: '/tabler-icon-calendar-plus.png',
+        href: '/promotionbycategory',
     },
     {
         title: 'Eliminar Promoción',
         icon: '/tabler-icon-calendar-minus.png',
+         href: '/promotionbycategory',
     },
     {
         title: 'Estado de Promociones',
         icon: '/tabler-icon-calendar-off.png',
+         href: '/promotionbycategory',
     },
     {
         title: 'Lista de Promociones',
         icon: '/tabler-icon-list-details.png',
+         href: '/promotionbycategory',
     },
     {
         title: 'Lista de Borradores',
         icon: '/tabler-icon-eraser.png',
+         href: '/promotionbycategory',
     }
 ]
 
@@ -39,7 +44,9 @@ export default function Index() {
                    <hr className="w-[100px] h-[0.5px] my-3 border-t border-[#7C3785]" />
                 <CardIconImg url={item.icon}></CardIconImg>
         </div>
-        ))}
+        )
+        
+        )}
     </div>
   )
 }
