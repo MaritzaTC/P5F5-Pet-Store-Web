@@ -1,8 +1,12 @@
 import React from 'react'
+import MainLayout from '../MainLayout';
+import CategoryPromotion from '@/app/components/organisms/CategoryPromotion';
 
 const index = () => {
   return (
-    <div>index</div>
+  <MainLayout>
+      <CategoryPromotion></CategoryPromotion>
+  </MainLayout>
   )
 }
 
