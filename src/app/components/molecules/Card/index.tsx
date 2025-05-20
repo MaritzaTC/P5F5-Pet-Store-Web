@@ -22,7 +22,7 @@ const cardData = [
     {
         title: 'Estado de Promociones',
         icon: '/tabler-icon-calendar-off.png',
-         href: '/promotionbycategory',
+         href: '/selectionpromotion',
     },
     {
         title: 'Lista de Promociones',
