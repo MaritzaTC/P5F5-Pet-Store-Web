@@ -19,7 +19,7 @@ export default function Index() {
                 <form className='flex flex-col gap-4 mt-10'>
                     <InputText type={'text'} placeholder='Nombre completo'  ></InputText>
                     <InputText type={'password'} placeholder='Contraseña'></InputText>
-                    <Dropdown label={''} value='Selecionar rol'  placeholder="Seleccionar rol" name={selectedOption} options={['Administrador', 'Gestor de promociones', 'Lector']} value={selectedOption} onChange={(e) => setSelectedOption(e.target.value)} ></Dropdown>
+                    <Dropdown label={''}  placeholder="Seleccionar rol" name={selectedOption} options={['Administrador', 'Gestor de promociones', 'Lector']} value={selectedOption} onChange={(e) => setSelectedOption(e.target.value)} ></Dropdown>
                     <ButtonRounded text='Crear cuenta' className='bg-[#7C3785]  text-white'></ButtonRounded>
                     <Link href={'/login'} >
                     <ButtonRounded text='Iniciar sesión' className='bg-white w-[300px] text-[#7C3785] border-[#7C3785] border-1'></ButtonRounded>
