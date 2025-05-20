@@ -4,8 +4,8 @@ import { NavIcon } from '@/app/components/atoms/Icons/index'
 
 const Index = () => {
     return (
-        <div className="bg-[#7C3785] w-screen h-[101px] flex items-center justify-between gap-10 md:px-8 ">
-            <div className='flex items-center ml-4 sm:ml-10 md:ml-20'>
+        <div className="bg-[#7C3785] w-screen h-full flex items-center justify-between gap-10 md:px-8 ">
+            <div className='flex items-center ml-4 gap-10 sm:ml-10 md:ml-20'>
                 <TextTitleName text="PetStore" />
                 <NavIcon icon='tabler:baseline-density-medium'></NavIcon>
             </div>
