@@ -7,6 +7,7 @@ import { ButtonRounded3 } from '../../atoms/Buttons'
 import { Dropdown } from '../../molecules/Dropdowm'
 
 export default function index() {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [selectedOption, setSelectedOption] = useState('');
   return (
     <div>
@@ -28,7 +29,6 @@ export default function index() {
                            <TextRegular7 text='Categoría'></TextRegular7>
                      <Dropdown className='w-[266px]' label={''} name={selectedOption} options={['Administrador', 'Gestor de promociones', 'Lector']} value={selectedOption} onChange={(e) => setSelectedOption(e.target.value)} ></Dropdown>
                     </div>
-                
                     <CreateInput text='Nombre'></CreateInput>
                     <CreateInput text='Producto'></CreateInput>
                     <CreateInput text='% Descuento'></CreateInput>
