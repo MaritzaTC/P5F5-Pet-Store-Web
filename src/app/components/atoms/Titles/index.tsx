@@ -75,5 +75,19 @@ const TextRegular7 = ({text}: {text: string}) => {
         </h1>
     );
 };
+const TextRegular8 = ({text}: {text: string}) => {
+    return (
+        <h1 className='text-[18px] font-semibold  '>
+           {text}
+        </h1>
+    );
+};
+const TextRegular9 = ({text}: {text: string}) => {
+    return (
+        <h1 className='text-[15px] font-normal text-[#71717A]'>
+           {text}
+        </h1>
+    );
+};
 
-export  {TextTitleName, TextTitle,TextTitle2, TextRegular,TextRegular2,TextRegular3,TextRegular4,TextRegular5,TextRegular6,TextRegular7}
+export  {TextTitleName, TextTitle,TextTitle2, TextRegular,TextRegular2,TextRegular3,TextRegular4,TextRegular5,TextRegular6,TextRegular7,TextRegular8,TextRegular9}
