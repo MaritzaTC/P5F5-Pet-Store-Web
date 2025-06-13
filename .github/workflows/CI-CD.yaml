@@ -7,6 +7,7 @@ env:
     VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
     VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
     VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+    NEXT_PUBLIC_GRAPHQL_API_URI: ${{ vars.GRAPHQL_API_URI }}
 jobs:
   build:
     runs-on: ubuntu-latest
