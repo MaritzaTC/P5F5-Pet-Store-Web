@@ -33,8 +33,9 @@ export default function Index() {
     setNombreUsuario('');
     setContrasena('');
     setSelectedOption('');
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (err) {
-      console.error('Error al crear usuario:', err);
+      console.error('Error al crear usuario:');
     }
   };
 
