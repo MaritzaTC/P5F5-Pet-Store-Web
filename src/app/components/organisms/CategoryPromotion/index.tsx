@@ -11,7 +11,7 @@ import { CREAR_PROMOCION } from '@/app/api/graphql/mutations/promotions'
 import { GET_PRODUCTS } from '@/app/api/graphql/querys/products'
 
 export default function index() {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
+  
     const [selectedOption, setSelectedOption] = useState('');
     const [titulo, setTitulo] = useState('');
     const [porcentajeDescuento, setPorcentajeDescuento] = useState('');
