@@ -15,6 +15,22 @@ const EyeIcon = ({ icon }: { icon: string }) => {
   return <Icon icon={icon} width="20" height="20" className="text-black" />;
 };
 
+const IconSuccess = () => {
+  return (
+    <svg
+      className="w-20 h-20 text-green-600 mx-auto block"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      viewBox="0 0 24 24"
+    >
+      <circle cx="12" cy="12" r="10" stroke="currentColor" />
+      <path d="M8 12l2 2 4-4" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  )
+}
+
+export default IconSuccess
 
 const GreaterIcon = () => {
     return (
@@ -68,4 +84,4 @@ const AdminIcon= ({ icon }: { icon: string }) => {
         </div>
     );
 }
-export { NavIcon,EyeIcon,GreaterIcon, PersonIcon,CardIcon,CardIconImg,DateIcon,AdminIcon};
+export { NavIcon,EyeIcon,GreaterIcon, PersonIcon,CardIcon,CardIconImg,DateIcon,AdminIcon,IconSuccess};
