@@ -2,6 +2,7 @@ import React from 'react'
 import { TextRegular, TextRegular2, TextTitle2 } from '../../atoms/Titles'
 import { GreaterIcon } from '../../atoms/Icons'
 import Card from '../../molecules/Card'
+import Link from 'next/link'
 
 export default function Index() {
     return (
@@ -9,7 +10,9 @@ export default function Index() {
             <div className='flex gap-4 ml-2 sm:ml-10 md:ml-20 px-2 mt-6'>
                 <TextRegular2 text='Inicio'></TextRegular2>
                 <GreaterIcon></GreaterIcon>
-                <TextRegular2 text='Panel de Administardor'></TextRegular2>
+               <Link href='/adminfunctions'>
+                 <TextRegular2 text='Panel de Administardor'></TextRegular2>
+                </Link>
                 <GreaterIcon></GreaterIcon>
                 <TextRegular text='Promociones'></TextRegular>
             </div>
@@ -18,7 +21,6 @@ export default function Index() {
                 <div className='grid h-56 grid-rows-3 content-start gap-4 ...'>
                     <Card></Card>
                 </div>
-
             </div>
         </div>
     )
