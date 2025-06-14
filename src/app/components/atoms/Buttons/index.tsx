@@ -50,7 +50,7 @@ const ButtonCard3 = ({
   return (
     <button
       onClick={onClick}
-      className={`rounded-[6px] font-bold text-[14px] bg-white w-[300px] h-[44px] text-[#7C3785] border border-[#7C3785] ${className ?? ''}`}
+      className={`rounded-[6px] font-bold text-[14px] bg-white w-[300px] h-[44px] text-[#7C3785] border border-[#7C3785] cursor-pointer ${className ?? ''}`}
     >
       {text}
     </button>
