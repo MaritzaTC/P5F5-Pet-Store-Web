@@ -161,7 +161,7 @@ if (!selectedOption) {
                             <Dropdown
                                 className='w-[266px]'
                                 label={''}
-                                name={selectedOption}
+                                name='Categoría'
                                 options={[
                                     { label: 'Alimentos y nutrición', value: 'Alimentos y nutrición' },
                                     { label: 'Higiene y cuidado', value: 'Higiene y cuidado' },
