@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ButtonRounded } from "../../atoms/Buttons";
 import { GreaterIcon } from "../../atoms/Icons";
-import { InputText, ValidatedInputText } from "../../molecules/Inputs";
+import { ValidatedInputText } from "../../molecules/Inputs";
 import { TextRegular, TextRegular2, TextTitle } from "../../atoms/Titles";
 import { useMutation } from "@apollo/client";
 import { USER_LOGIN } from "@/app/api/graphql/mutations/accounts";
@@ -51,6 +51,7 @@ export default function Index() {
       });
 
     } catch (error: unknown) {
+      console.error(error);
       alert('No se pudo iniciar sesión. Verifica tus credenciales e inténtalo nuevamente.');
     }
   };
