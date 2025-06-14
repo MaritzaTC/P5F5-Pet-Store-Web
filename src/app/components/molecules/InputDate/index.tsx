@@ -1,28 +1,48 @@
 import React from 'react'
 import { TextRegular7 } from '../../atoms/Titles'
+import { Button } from "@/components/ui/button"
+import { Calendar } from "@/components/ui/calendar"
 import { DateIcon } from '../../atoms/Icons'
-
-const index = ({text}: {text: string}) => {
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover"
+const index = ({text, value, onChange}: {text: string;   value?: Date; onChange: (date: Date | undefined) => void; }) => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [open, setOpen] = React.useState(false);
+  
   return (
     <div>
         <div className='flex items-center gap-x-4'>
             <div>
             <TextRegular7 text={text}></TextRegular7>
             </div>
-            <div className="relative ">
-            <div className="absolute pr-2 inset-y-0 end-0 flex items-center ps-3 pointer-events-none">
-               <DateIcon icon={'tabler:calendar-event'}></DateIcon>
-            </div>
-            <input id='default-datepicker'
-                type="text" 
-                className="border border-gray-300 
-                text-gray-900 w-[266px] h-[40px]
-                pl-4"
-                placeholder="dd/mm/yyyy"
-            />
-            <div id="datepicker-inline" inline-datepicker data-date="02/25/2024"></div>
-            </div>
+       <Popover open={open} onOpenChange={setOpen}>
+        <PopoverTrigger asChild>
+          <Button
+            variant='outline'
+            id='date'
+             className={`w-[266px] h-[42px] justify-between font-normal }`}
+          >
+            {value ? value.toLocaleDateString() : 'dd/mm/yyyy'}
+            <DateIcon icon='tabler:calendar-event' />
+          </Button>
+        </PopoverTrigger>
+        <PopoverContent className='w-auto overflow-hidden p-0' align='start'>
+          <Calendar
+            mode='single'
+            selected={value}
+            captionLayout='dropdown'
+            onSelect={(date) => {
+              onChange(date);
+              setOpen(false);
+            }}
+          />
+        </PopoverContent>
+      </Popover>
         </div>
+        
     </div>
   )
 }
