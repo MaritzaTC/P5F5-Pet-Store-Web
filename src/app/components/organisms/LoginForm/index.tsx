@@ -1,4 +1,4 @@
-import Link from "next/link";
+
 import { ButtonRounded } from "../../atoms/Buttons";
 import { GreaterIcon } from "../../atoms/Icons";
 import { ValidatedInputText } from "../../molecules/Inputs";
@@ -89,16 +89,11 @@ export default function Index() {
 
           <ButtonRounded
             text="Iniciar sesión"
-            className="bg-[#7C3785] w-[300px] text-white mt-6"
+            className="bg-[#7C3785] w-[300px] text-white mt-2"
             type="submit"
           />
 
-          <Link href="/register">
-            <ButtonRounded
-              text="Registrarse"
-              className="bg-white w-[300px] text-[#7C3785] border-[#7C3785] border-1"
-            />
-          </Link>
+         
         </form>
       </div>
     </div>
