@@ -49,14 +49,18 @@ export default function Index() {
       <div className="flex gap-4 ml-20 px-2 mt-6">
         <TextRegular2 text="Inicio" />
         <GreaterIcon />
-        <TextRegular text="Registrarse" />
+         <Link href='/adminfunctions'>
+            <TextRegular2 text='Panel de Administrador'></TextRegular2>
+          </Link>
+          <GreaterIcon></GreaterIcon>
+        <TextRegular text="Registrar usuario" />
       </div>
       <div className="flex flex-col items-center justify-center mt-10">
-        <TextTitle text="Registrarse" />
+        <TextTitle text="Registrar Usuario" />
         <form className="flex flex-col gap-4 mt-10 pb-4" onSubmit={handleSubmit}>
           <InputText
             type="text"
-            placeholder="Nombre completo"
+            placeholder="Usuario"
             value={nombreUsuario}
             onChange={(e) => setNombreUsuario(e.target.value)}
           />
@@ -70,17 +74,15 @@ export default function Index() {
             label=""
             placeholder="Seleccionar rol"
             name={selectedOption}
-            options={['ADMIN', 'USUARIO']}
+            options={[
+              { label: 'Admin', value: 'ADMIN' },
+              { label: 'Usuario', value: 'USUARIO' }
+            ]}
             value={selectedOption}
             onChange={(e) => setSelectedOption(e.target.value)}
           />
           <ButtonRounded text="Crear cuenta" className="bg-[#7C3785] text-white" />
-          <Link href="/login">
-            <ButtonRounded
-              text="Iniciar sesión"
-              className="bg-white w-[300px] text-[#7C3785] border-[#7C3785] border-1"
-            />
-          </Link>
+       
         </form>
         {loading && <Icon icon="tabler:loader" className="animate-spin text-purple-700" width={24} height={24} />}
         {error && <p>Error al crear usuario, inténtelo de nuevo</p>}
