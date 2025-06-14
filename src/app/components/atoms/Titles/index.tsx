@@ -1,64 +1,40 @@
-import React from 'react'
+import React from 'react';
 
-const TextTitleName = ({text}: {text: string}) => {
-    return (
-        <h1 className=' text-[48px] font-bold text-white '>
-           {text}
-        </h1>
-    );
+const TextTitleName = ({ text }: { text: string }) => {
+  return <h1 className="text-[48px] font-bold text-white">{text}</h1>;
 };
 
-const TextTitle = ({text}: {text: string}) => {
-    return (
-        <h1 className='text-[30px] font-bold'>
-           {text}
-        </h1>
-    );
-};
-const TextTitle2 = ({text}: {text: string}) => {
-    return (
-        <h1 className='text-[24px] font-semibold'>
-           {text}
-        </h1>
-    );
-};
-const TextRegular = ({text}: {text: string}) => {
-    return (
-        <h1 className='text-[14px] font-normal'>
-           {text}
-        </h1>
-    );
-};
-const TextRegular2 = ({text}: {text: string}) => {
-    return (
-        <h1 className='text-[14px] font-normal text-[#71717A]'>
-           {text}
-        </h1>
-    );
-};
-const TextRegular3 = ({text}: {text: string}) => {
-    return (
-        <h1 className='text-[19px] font-semibold text-[#7C3785] text-center mx-4 '>
-           {text}
-        </h1>
-    );
-};
-const TextRegular4 = ({text}: {text: string}) => {
-    return (
-        <h1 className='text-[19px] font-semibold  '>
-           {text}
-        </h1>
-    );
+const TextTitle = ({ text }: { text: string }) => {
+  return <h1 className="text-[30px] font-bold">{text}</h1>;
 };
 
-const TextRegular5 = ({text}: {text: string}) => {
-    return (
-        <h1 className='text-[19px] font-semibold  text-[#71717A]  '>
-           {text}
-        </h1>
-    );
+const TextTitle2 = ({ text }: { text: string }) => {
+  return <h1 className="text-[24px] font-semibold">{text}</h1>;
 };
 
+const TextRegular = ({ text }: { text: string }) => {
+  return <h1 className="text-[14px] font-normal">{text}</h1>;
+};
+
+const TextRegular2 = ({ text }: { text: string }) => {
+  return <h1 className="text-[14px] font-normal text-[#71717A]">{text}</h1>;
+};
+
+const TextRegular3 = ({ text }: { text: string }) => {
+  return (
+    <h1 className="text-[19px] font-semibold text-[#7C3785] text-center mx-4">
+      {text}
+    </h1>
+  );
+};
+
+const TextRegular4 = ({ text }: { text: string }) => {
+  return <h1 className="text-[19px] font-semibold">{text}</h1>;
+};
+
+const TextRegular5 = ({ text }: { text: string }) => {
+  return <h1 className="text-[19px] font-semibold text-[#71717A]">{text}</h1>;
+};
 
 const TextRegular6 = ({ text }: { text: string }) => {
   return (
@@ -68,42 +44,25 @@ const TextRegular6 = ({ text }: { text: string }) => {
     </h1>
   );
 };
-const TextRegular7 = ({text}: {text: string}) => {
-    return (
-        <h1 className='text-[15px] font-normal w-[100px]'>
-           {text}
-        </h1>
-    );
-};
-const TextRegular8 = ({text}: {text: string}) => {
-    return (
-        <h1 className='text-[18px] font-semibold  '>
-           {text}
-        </h1>
-    );
-};
-const TextRegular9 = ({text}: {text: string}) => {
-    return (
-        <h1 className='text-[15px] font-normal text-[#71717A]'>
-           {text}
-        </h1>
-    );
+
+const TextRegular7 = ({ text }: { text: string }) => {
+  return <h1 className="text-[15px] font-normal w-[100px]">{text}</h1>;
 };
 
-const TextRegular10 = ({text}: {text: string}) => {
-    return (
-        <h1 className='text-[24px] font-inter  text-[#343434]  '>
-           {text}
-        </h1>
-    );
+const TextRegular8 = ({ text }: { text: string }) => {
+  return <h1 className="text-[18px] font-semibold">{text}</h1>;
 };
 
-const TextRegular11 = ({text}: {text: string}) => {
-    return (
-        <h1 className='text-[16px] font-inter  text-[#343434]  '>
-           {text}
-        </h1>
-    );
+const TextRegular9 = ({ text }: { text: string }) => {
+  return <h1 className="text-[15px] font-normal text-[#71717A]">{text}</h1>;
 };
 
-export  {TextTitleName, TextTitle,TextTitle2, TextRegular,TextRegular2,TextRegular3,TextRegular4,TextRegular5,TextRegular6,TextRegular7,TextRegular8,TextRegular9,TextRegular10,TextRegular11}
+const TextRegular10 = ({ text }: { text: string }) => {
+  return <h1 className="text-[24px] font-inter text-[#343434]">{text}</h1>;
+};
+
+const TextRegular11 = ({ text }: { text: string }) => {
+  return <h1 className="text-[16px] font-inter text-[#343434]">{text}</h1>;
+};
+
+export {TextTitleName,TextTitle,TextTitle2,TextRegular,TextRegular2,TextRegular3,TextRegular4,TextRegular5,TextRegular6,TextRegular7,TextRegular8,TextRegular9,TextRegular10,TextRegular11,};
