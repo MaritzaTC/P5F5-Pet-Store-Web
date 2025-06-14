@@ -67,5 +67,5 @@ const ButtonCard3 = ({
   );
 };
 
-export { ButtonRounded,ButtonRounded2,ButtonRounded3,ButtonCard,ButtonCard2, ButtonCard3};
+export { ButtonRounded,ButtonRounded2,ButtonRounded3,ButtonCard,ButtonCard2, ButtonCard3,ButtonRounded4};
 
