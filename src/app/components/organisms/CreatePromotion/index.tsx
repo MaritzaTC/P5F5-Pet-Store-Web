@@ -18,7 +18,7 @@ const index = () => {
   const [producto, setProducto] = useState('');
   const [fechaInicio, setFechaInicio] = useState<Date | null>(null);
   const [fechaFin, setFechaFin] = useState<Date | null>(null);
-const [ setErrores] = useState<{ [key: string]: string }>({});
+
 
   const [mensajeExito, setMensajeExito] = useState('');
   const { data, } = useQuery(GET_PRODUCTS);
