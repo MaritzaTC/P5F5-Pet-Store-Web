@@ -6,6 +6,7 @@ import { Dropdown } from '../Dropdowm';
 
 
 
+
 const CreateInput = ({text, value, onChange}: {text: string;  value: string; onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;}) => {   
     return (
         <div className='flex items-center gap-4 w-full max-w-md '>
@@ -36,8 +37,7 @@ const CreateInput2 = ({ text, icon }: { text: string; icon?: string }) => {
         </div>
     );
 };
-
-interface Option {
+export interface DropdownOption {
   value: string;
   label: string;
 }
@@ -47,7 +47,7 @@ interface CreateInput3Props {
   value: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => void;
   isDropdown?: boolean;
-  options?: Option[]; 
+  options?: DropdownOption[]; 
   placeholder?: string;
 }
 
@@ -68,7 +68,7 @@ const CreateInput3: React.FC<CreateInput3Props> = ({
           label=''
             placeholder={placeholder}
           name={text}
-          options={options.map(option => option.label)}
+          options={options}
           value={value}
           onChange={onChange}
         />
