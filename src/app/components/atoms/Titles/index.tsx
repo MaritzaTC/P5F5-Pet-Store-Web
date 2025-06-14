@@ -90,4 +90,12 @@ const TextRegular9 = ({text}: {text: string}) => {
     );
 };
 
-export  {TextTitleName, TextTitle,TextTitle2, TextRegular,TextRegular2,TextRegular3,TextRegular4,TextRegular5,TextRegular6,TextRegular7,TextRegular8,TextRegular9}
+const TextRegular11 = ({text}: {text: string}) => {
+    return (
+        <h1 className='text-[30px] font-inter'>
+           {text}
+        </h1>
+    );
+};
+
+export  {TextTitleName, TextTitle,TextTitle2, TextRegular,TextRegular2,TextRegular3,TextRegular4,TextRegular5,TextRegular6,TextRegular7,TextRegular8,TextRegular9, TextRegular11}

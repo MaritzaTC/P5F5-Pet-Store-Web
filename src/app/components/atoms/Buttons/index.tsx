@@ -38,4 +38,24 @@ const ButtonCard2 = ({ text, className }: { text: string; className?: string }) 
   );
 }
 
-export { ButtonRounded,ButtonRounded2,ButtonRounded3,ButtonCard,ButtonCard2};
+const ButtonCard3 = ({
+  text,
+  className,
+  onClick,
+}: {
+  text: string;
+  className?: string;
+  onClick?: () => void;
+}) => {
+  return (
+    <button
+      onClick={onClick}
+      className={`rounded-[6px] font-bold text-[14px] bg-white w-[300px] h-[44px] text-[#7C3785] border border-[#7C3785] ${className ?? ''}`}
+    >
+      {text}
+    </button>
+  );
+};
+
+
+export { ButtonRounded,ButtonRounded2,ButtonRounded3,ButtonCard,ButtonCard2, ButtonCard3};
