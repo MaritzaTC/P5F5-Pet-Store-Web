@@ -7,9 +7,8 @@ export default function Index() {
   const { nombreUsuario } = router.query;
 
   const handleClick = () => {
-    router.push('/adminpromotions');
+    router.push('/adminfunctions');
   };
-
   return (
     <div className="flex flex-col gap-4 items-center px-2 mt-6">
       <TextTitle text="Inicio de sesión exitoso." />
