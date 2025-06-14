@@ -18,7 +18,7 @@ const index = () => {
   const [producto, setProducto] = useState('');
   const [fechaInicio, setFechaInicio] = useState<Date | null>(null);
   const [fechaFin, setFechaFin] = useState<Date | null>(null);
-const [errors, setErrores] = useState<{ [key: string]: string }>({});
+const [ setErrores] = useState<{ [key: string]: string }>({});
 
   const [mensajeExito, setMensajeExito] = useState('');
   const { data, } = useQuery(GET_PRODUCTS);
@@ -87,19 +87,11 @@ console.log("Fecha fin ISO:", fechaFin?.toISOString().split("T")[0]);
                 }))}
               />
               <CreateInput text='% Descuento' value={porcentajeDescuento} onChange={(e)=> setPorcentajeDescuento(e.target.value)}></CreateInput>
-              <InputDate text='Fecha Inicio' value={fechaInicio ?? undefined} onChange={(date) => setFechaInicio(date ?? null)} error={errors.fechaInicio}></InputDate>
-              <InputDate text='Fecha Fin' value={fechaFin ?? undefined} onChange={(date) => setFechaFin(date ?? null)} error={errors.fechaFin} ></InputDate>
+              <InputDate text='Fecha Inicio' value={fechaInicio ?? undefined} onChange={(date) => setFechaInicio(date ?? null)} ></InputDate>
+              <InputDate text='Fecha Fin' value={fechaFin ?? undefined} onChange={(date) => setFechaFin(date ?? null)} ></InputDate>
               <div className='flex justify-between w-full max-w-md mt-6'>
-                <ButtonRounded3 text='Cancelar' className='text-[#F13434] border-[#F13434] border-1 text-bold '  onClick={() => {
-    setTitulo('');
-    setProducto('');
-    setPorcentajeDescuento('');
-    setFechaInicio(null);
-    setFechaFin(null);
-    setErrores({});
-    setMensajeExito('');
-  }}></ButtonRounded3>
-                <ButtonRounded3 text='Guardar' className='bg-[#00B22F] text-white text-bold border-none' onClick={handleGuardar}></ButtonRounded3>
+                <ButtonRounded3 text='Cancelar' className='text-[#F13434] border-[#F13434] border-1 text-bold '  ></ButtonRounded3>
+                <ButtonRounded3 text='Guardar' className='bg-[#00B22F] text-white text-bold border-none' ></ButtonRounded3>
               </div>
             </form>
             {mensajeExito && (
