@@ -16,9 +16,9 @@ const ButtonRounded2 = ({ text, className}: { text: string; className?: string})
   );
 };
 
-const ButtonRounded3 = ({ text, className }: { text: string; className?: string }) => {
+const ButtonRounded3 = ({ text, className, ...rest }: { text: string; className?: string }& React.ButtonHTMLAttributes<HTMLButtonElement>) => {
   return (
-    <button  className={`rounded-[6px] font-normal text-[14px] w-[119px] h-[40px]  ${className ?? ''}`}>
+    <button  className={`rounded-[6px] font-normal text-[14px] w-[119px] h-[40px]  ${className ?? ''}`}{...rest}>
       {text}
     </button>
   );
