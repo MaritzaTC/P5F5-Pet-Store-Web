@@ -2,6 +2,7 @@ import React from 'react'
 import { CreateInput2 } from '../../molecules/MiniCard'
 import { TextRegular, TextRegular2, TextTitle2 } from '../../atoms/Titles'
 import { GreaterIcon } from '../../atoms/Icons'
+import Link from 'next/dist/client/link'
 
 
 export default function index() {
@@ -18,9 +19,14 @@ export default function index() {
             </div>
 
             <CreateInput2 text={'Ventas'} icon='tabler:zoom-money'></CreateInput2>
-            <CreateInput2 text={'Promociones'} icon='tabler:discount-2'></CreateInput2>
+            <Link href='/adminpromotions'>
+                <CreateInput2 text={'Promociones'} icon='tabler:discount-2'></CreateInput2>
+            </Link>
             <CreateInput2 text={'Inventario'} icon='tabler:clipboard-list'></CreateInput2>
+            <Link href='/register'>
             <CreateInput2 text={'Usuarios'} icon='tabler:users-group'></CreateInput2>
+            </Link>
+            
             <CreateInput2 text={'Extra'} icon='tabler:zoom-money'></CreateInput2>
             </div>
             
