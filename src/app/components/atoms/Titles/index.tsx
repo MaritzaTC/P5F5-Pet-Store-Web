@@ -90,4 +90,20 @@ const TextRegular9 = ({text}: {text: string}) => {
     );
 };
 
-export  {TextTitleName, TextTitle,TextTitle2, TextRegular,TextRegular2,TextRegular3,TextRegular4,TextRegular5,TextRegular6,TextRegular7,TextRegular8,TextRegular9}
+const TextRegular10 = ({text}: {text: string}) => {
+    return (
+        <h1 className='text-[24px] font-inter  text-[#343434]  '>
+           {text}
+        </h1>
+    );
+};
+
+const TextRegular11 = ({text}: {text: string}) => {
+    return (
+        <h1 className='text-[16px] font-inter  text-[#343434]  '>
+           {text}
+        </h1>
+    );
+};
+
+export  {TextTitleName, TextTitle,TextTitle2, TextRegular,TextRegular2,TextRegular3,TextRegular4,TextRegular5,TextRegular6,TextRegular7,TextRegular8,TextRegular9,TextRegular10,TextRegular11}

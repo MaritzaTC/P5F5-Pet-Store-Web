@@ -22,6 +22,14 @@ const ButtonRounded3 = ({ text, className }: { text: string; className?: string 
     </button>
   );
 }
+
+const ButtonRounded4 = ({ text, className }: { text: string; className?: string }) => {
+  return (
+    <button  className={`rounded-[6px] cursor-pointer font-bold text-[14px] text-[#7C3785] w-[300px] h-[44px] border-[1px] border-[#7C3785] ${className ?? ''}`}>
+      {text}
+    </button>
+  );
+}
 const ButtonCard = ({ text, className }: { text: string; className?: string }) => {
   return (
     <button className={`rounded-full font-bold text-[12px] bg-white w-[59px] h-[22px] text-[#7C3785] border-[#7C3785] border-1 ${className ?? ''}`}>
@@ -38,4 +46,5 @@ const ButtonCard2 = ({ text, className }: { text: string; className?: string }) 
   );
 }
 
-export { ButtonRounded,ButtonRounded2,ButtonRounded3,ButtonCard,ButtonCard2};
+
+export { ButtonRounded,ButtonRounded2,ButtonRounded3,ButtonRounded4,ButtonCard,ButtonCard2};
