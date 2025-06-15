@@ -1,10 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { TextRegular10, TextRegular11 } from '../../atoms/Titles'
 import { ButtonRounded4 } from '../../atoms/Buttons'
 import { IconSuccess } from '../../atoms/Icons'
 import Link from 'next/link'
+import { useRouter } from 'next/dist/client/router'
 
 const Index = () => {
+   const router = useRouter();
+  
+    useEffect(() => {
+      const token = localStorage.getItem('token');
+      if (!token) {
+        router.push('/login'); // Redirige si no hay token
+      }
+    }, [router]);
   return (
     <div className="flex items-center justify-center min-h-screen">
       <div className="text-center space-y-4">
