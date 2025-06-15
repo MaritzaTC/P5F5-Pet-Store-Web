@@ -1,10 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { TextRegular, TextRegular2, TextTitle2 } from '../../atoms/Titles'
 import { GreaterIcon } from '../../atoms/Icons'
 import Card from '../../molecules/Card'
 import Link from 'next/link'
+import { useRouter } from 'next/dist/client/router'
 
 export default function Index() {
+     const router = useRouter();
+    
+      useEffect(() => {
+        const token = localStorage.getItem('token');
+        if (!token) {
+          router.push('/login'); // Redirige si no hay token
+        }
+      }, [router]);
     return (
         <div>
             <div className='flex gap-4 ml-2 sm:ml-10 md:ml-20 px-2 mt-6'>
