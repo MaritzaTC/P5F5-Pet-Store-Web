@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router'; 
 import { TextRegular, TextRegular2, TextTitle } from '../../atoms/Titles';
 import { InputText } from '../../molecules/Inputs';
@@ -11,7 +11,14 @@ import { useMutation } from '@apollo/client';
 import { INSERTAR_USUARIO } from '@/app/api/graphql/mutations/accounts';
 
 export default function Index() {
+  
   const router = useRouter(); 
+  useEffect(() => {
+        const token = localStorage.getItem('token');
+        if (!token) {
+          router.push('/login'); // Redirige si no hay token
+        }
+      }, [router]);
   const [selectedOption, setSelectedOption] = useState('');
   const [nombreUsuario, setNombreUsuario] = useState('');
   const [contrasena, setContrasena] = useState('');
