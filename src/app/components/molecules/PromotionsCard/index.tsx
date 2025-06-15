@@ -21,10 +21,10 @@ type Producto = {
 
 export default function Index() {
   const { data, loading, error } = useQuery(GET_PRODUCTS);
-
+  const [paginaActual, setPaginaActual] = React.useState(1);
   if (loading) return <p>Cargando promociones...</p>;
   if (error) return <p>Error al cargar productos</p>;
-  const [paginaActual, setPaginaActual] = React.useState(1);
+
   
 
   // Solo productos con promociones activas
@@ -76,7 +76,8 @@ const productosPorPagina = 4;
   };
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-6">
+    <div>
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-6">
       {productosPaginados.map((item: {
         productoId: number;
         nombre: string;
@@ -117,7 +118,9 @@ const productosPorPagina = 4;
 
         </div>
       ))}
-      <div className='flex items-center justify-center mt-6 gap-6'>
+     
+    </div>
+     <div className='w-full flex justify-center items-center gap-4 mt-6'>
         <button
           onClick={() => setPaginaActual((prev) => Math.max(prev - 1, 1))}
           disabled={paginaActual === 1}
@@ -137,5 +140,6 @@ const productosPorPagina = 4;
         </button>
       </div>
     </div>
+    
   );
 }
