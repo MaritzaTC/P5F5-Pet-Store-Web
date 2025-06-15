@@ -20,7 +20,9 @@ type Producto = {
 };
 
 export default function Index() {
-  const { data, loading, error } = useQuery(GET_PRODUCTS);
+  const { data, loading, error } = useQuery(GET_PRODUCTS,
+     { fetchPolicy: "network-only"}, // fuerza a ir al servidor siempre
+  );
   const [paginaActual, setPaginaActual] = React.useState(1);
   if (loading) return <p>Cargando promociones...</p>;
   if (error) return <p>Error al cargar productos</p>;

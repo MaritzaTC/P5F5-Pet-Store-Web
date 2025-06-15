@@ -168,7 +168,7 @@ export default function index() {
                     <TextTitle text='Crear Promoción por Categoría'></TextTitle>
                     <form className='flex flex-col gap-4 mt-10 justify-between' onSubmit={(e) => {
                         e.preventDefault();  // <-- Evita el reload
-                        handleGuardar();
+                   
                     }}>
                         <div className='flex items-center gap-4 w-full max-w-md'>
                             <TextRegular7 text='Categoría'></TextRegular7>
