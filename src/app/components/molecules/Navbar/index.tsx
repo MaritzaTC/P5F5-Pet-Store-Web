@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useEffect, useState } from 'react'
 import { TextTitleName } from '@/app/components/atoms/Titles/index'
 import { NavIcon } from '@/app/components/atoms/Icons/index'
@@ -21,6 +22,14 @@ const Index = () => {
         setIsLoggedIn(false);
         router.push('/login');
     };
+    const [carritoCount, setCarritoCount] = useState(0);
+
+useEffect(() => {
+  const carrito = JSON.parse(localStorage.getItem('carrito') || '[]');
+  const total = carrito.reduce((acc: number, item: any) => acc + item.cantidad, 0);
+  setCarritoCount(total);
+}, []);
+
     return (
         <div className="bg-[#7C3785] w-screen h-full flex items-center justify-between gap-10 md:px-8 ">
             <div className='flex items-center ml-4 gap-10 sm:ml-10 md:ml-20'>
@@ -33,7 +42,15 @@ const Index = () => {
                         <NavIcon icon='tabler:logout' />
                     </button>
                 )}
-                <NavIcon icon='tabler:shopping-cart'></NavIcon>
+               <div className="relative">
+  <NavIcon icon='tabler:shopping-cart' />
+  {carritoCount > 0 && (
+    <span className="absolute -top-1 -right-2 bg-red-500 text-white text-xs rounded-full px-1">
+      {carritoCount}
+    </span>
+  )}
+</div>
+
             </div>
         </div>
     )
