@@ -21,7 +21,7 @@ const Index = () => {
         <TextRegular10 text="¡La cuenta ha sido creada con éxito!" />
         <TextRegular11 text="La cuenta ha sido creada exitosamente. El usuario ya puede" />
         <TextRegular11 text="acceder a nuestros servicios con tus credenciales." />
-        <Link href={'/adminpromotions'}>
+        <Link href={'/adminfunctions'}>
         <ButtonRounded4 text="Ir a la página principal" />
         </Link>
       </div>
