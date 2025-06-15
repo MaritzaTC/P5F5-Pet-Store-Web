@@ -8,6 +8,28 @@ const CREAR_PROMOCION = gql`
   }
 `;
 
+const ACTUALIZAR_PROMOCION = gql`
+  mutation ActualizarPromocion($id: ID!, $input: PromocionInput!) {
+    actualizarPromocion(id: $id, input: $input) {
+      activa
+      titulo
+      promocionId
+      porcentajeDescuento
+      fechaInicio
+      fechaFin
+      categoria
+    }
+  }
+`;
 
 
-export { CREAR_PROMOCION };
+
+const ELIMINAR_PROMOCION = gql`
+  mutation EliminarPromocion($id: ID!) {
+    deletePromocion(id: $id)
+  }
+`;
+
+
+
+export { CREAR_PROMOCION, ACTUALIZAR_PROMOCION,ELIMINAR_PROMOCION,};

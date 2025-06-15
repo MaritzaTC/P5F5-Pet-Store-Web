@@ -12,11 +12,31 @@ query MyQuery {
       precio
       productoId
     }
+    porcentajeDescuento
+    fechaFin
+    fechaInicio
+    categoria
   }
 }
 `;
-
-export {GET_PROMOCIONES}
+const GET_PROMOCION_BY_ID = gql`
+  query ObtenerPromocionPorId($id: ID!) {
+    obtenerPromocionPorId(id: $id) {
+      promocionId
+      titulo
+      categoria
+      fechaInicio
+      fechaFin
+      porcentajeDescuento
+      activa
+      productos {
+        productoId
+        nombre
+      }
+    }
+  }
+`;
+export { GET_PROMOCIONES,GET_PROMOCION_BY_ID }
 
 
 
