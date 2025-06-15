@@ -1,12 +1,21 @@
-import React from 'react'
+/* eslint-disable react-hooks/rules-of-hooks */
+import React, { useEffect } from 'react'
 import { TextRegular, TextRegular2, TextTitle2 } from '../../atoms/Titles'
 import { GreaterIcon } from '../../atoms/Icons';
 import { CreateBox2 } from '../../molecules/SelectionBoxes';
 import { ButtonRounded3 } from '../../atoms/Buttons';
 import { TextRegular8 } from '../../atoms/Titles';
 import { TextRegular9 } from '../../atoms/Titles';
+import { useRouter } from 'next/dist/client/router';
 
 const index = () => {
+   const router = useRouter();
+     useEffect(() => {
+        const token = localStorage.getItem('token');
+        if (!token) {
+          router.push('/login'); // Redirige si no hay token
+        }
+      }, [router]);
   return (
     <div>
       <div className='flex gap-4 ml-20 px-2 mt-6'>
