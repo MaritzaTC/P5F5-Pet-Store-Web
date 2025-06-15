@@ -11,6 +11,7 @@ import { useState } from "react";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { AlertCircleIcon } from "lucide-react";
 import Link from "next/dist/client/link";
+import { Icon } from "@iconify/react/dist/iconify.js";
 
 export default function Index() {
   const [nombreUsuario, setNombreUsuario] = useState('');
@@ -115,6 +116,7 @@ export default function Index() {
             </AlertDescription>
           </Alert>
         )}
+           {loading && <Icon icon="tabler:loader" className="animate-spin text-purple-700" width={24} height={24} />}
       </div>
     </div>
   );
