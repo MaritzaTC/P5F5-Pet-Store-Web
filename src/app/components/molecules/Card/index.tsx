@@ -14,26 +14,13 @@ const cardData = [
         icon: '/tabler-icon-calendar-plus.png',
         href: '/promotionbycategory',
     },
-    {
-        title: 'Eliminar Promoción',
-        icon: '/tabler-icon-calendar-minus.png',
-         href: '/promotionbycategory',
-    },
-    {
-        title: 'Estado de Promociones',
-        icon: '/tabler-icon-calendar-off.png',
-         href: '/selectionpromotion',
-    },
+    
     {
         title: 'Lista de Promociones',
         icon: '/tabler-icon-list-details.png',
          href: '/listpromotions',
     },
-    {
-        title: 'Lista de Borradores',
-        icon: '/tabler-icon-eraser.png',
-         href: '/eraserlist',
-    }
+    
 ]
 
 export default function Index() {
