@@ -37,7 +37,7 @@ export default function index() {
             <Link href='next'>
              <CreateInput2 text={'Inventario'} icon='tabler:clipboard-list'></CreateInput2>
             </Link>
-            <Link href='/register'>
+            <Link href='/next'>
             <CreateInput2 text={'Usuarios'} icon='tabler:users-group'></CreateInput2>
             </Link>
             <Link href='/register'>
