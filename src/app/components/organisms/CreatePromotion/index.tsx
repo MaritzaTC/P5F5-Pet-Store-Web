@@ -137,7 +137,9 @@ const index = () => {
     <div>
       <div>
         <div className='flex gap-4 ml-20 px-2 mt-6'>
-          <TextRegular2 text='Inicio'></TextRegular2>
+       <Link href='/promotions'>
+      <TextRegular2 text='Inicio'></TextRegular2>
+                </Link>
           <GreaterIcon></GreaterIcon>
           <Link href='/adminfunctions'>
             <TextRegular2 text='Panel de Administrador'></TextRegular2>

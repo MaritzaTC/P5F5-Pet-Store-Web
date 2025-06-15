@@ -7,6 +7,7 @@ import { ButtonRounded3 } from '../../atoms/Buttons';
 import { TextRegular8 } from '../../atoms/Titles';
 import { TextRegular9 } from '../../atoms/Titles';
 import { useRouter } from 'next/dist/client/router';
+import Link from 'next/link';
 
 const index = () => {
    const router = useRouter();
@@ -19,7 +20,9 @@ const index = () => {
   return (
     <div>
       <div className='flex gap-4 ml-20 px-2 mt-6'>
-        <TextRegular2 text='Inicio' />
+       <Link href='/promotions'>
+      <TextRegular2 text='Inicio'></TextRegular2>
+                </Link>
         <GreaterIcon />
         <TextRegular2 text='Panel de administrador' />
         <GreaterIcon />

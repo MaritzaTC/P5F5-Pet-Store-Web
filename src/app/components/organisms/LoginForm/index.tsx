@@ -10,6 +10,7 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { AlertCircleIcon } from "lucide-react";
+import Link from "next/dist/client/link";
 
 export default function Index() {
   const [nombreUsuario, setNombreUsuario] = useState('');
@@ -65,7 +66,9 @@ export default function Index() {
   return (
     <div>
       <div className="flex gap-4 ml-20 px-2 mt-6">
-        <TextRegular2 text="Inicio" />
+       <Link href='/promotions'>
+      <TextRegular2 text='Inicio'></TextRegular2>
+                </Link>
         <GreaterIcon />
         <TextRegular text="Inicio de sesión" />
       </div>

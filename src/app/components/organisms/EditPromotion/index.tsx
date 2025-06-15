@@ -174,7 +174,9 @@ const [mostrarDialogo, setMostrarDialogo] = useState(false);
   return (
     <div>
       <div className='flex gap-4 ml-20 px-2 mt-6'>
-        <TextRegular2 text='Inicio' />
+     <Link href='/promotions'>
+      <TextRegular2 text='Inicio'></TextRegular2>
+                </Link>
         <GreaterIcon />
         <Link href='/adminfunctions'><TextRegular2 text='Panel de Administrador' /></Link>
         <GreaterIcon />
