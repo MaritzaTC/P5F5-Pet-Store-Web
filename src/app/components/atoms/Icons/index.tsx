@@ -84,4 +84,12 @@ const AdminIcon= ({ icon }: { icon: string }) => {
         </div>
     );
 }
-export { NavIcon,EyeIcon,GreaterIcon, PersonIcon,CardIcon,CardIconImg,DateIcon,AdminIcon,IconSuccess};
+
+const DeleteIcon= ({ icon }: { icon: string }) => {
+    return (
+        <div className="flex justify-center items-center">
+            <Icon icon={icon} width="100" height="100" className="text-[#E14F4F]"/>
+        </div>
+    );
+}
+export { NavIcon,EyeIcon,GreaterIcon, PersonIcon,CardIcon,CardIconImg,DateIcon,AdminIcon,IconSuccess,DeleteIcon};
