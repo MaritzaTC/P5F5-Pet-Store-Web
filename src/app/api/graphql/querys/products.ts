@@ -7,9 +7,13 @@ query MyQuery {
     nombre
     precio
     productoId
-  
+    promociones {
+        activa
+        porcentajeDescuento
+      }
   }
 }
 `;
+
 
 export {GET_PRODUCTS}
