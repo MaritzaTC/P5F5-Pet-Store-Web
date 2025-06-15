@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 
 import { ButtonRounded } from "../../atoms/Buttons";
 import { GreaterIcon } from "../../atoms/Icons";
@@ -7,13 +8,17 @@ import { useMutation } from "@apollo/client";
 import { USER_LOGIN } from "@/app/api/graphql/mutations/accounts";
 import { useRouter } from "next/router";
 import { useState } from "react";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { AlertCircleIcon } from "lucide-react";
 
 export default function Index() {
   const [nombreUsuario, setNombreUsuario] = useState('');
   const [contrasena, setContrasena] = useState('');
   const [loginUsuario] = useMutation(USER_LOGIN);
-  const router = useRouter(); 
+  const router = useRouter();
   const [errores, setErrores] = useState<{ nombreUsuario?: string; contrasena?: string }>({});
+  const [mensajeError, setMensajeError] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -30,6 +35,7 @@ export default function Index() {
     setErrores({});
 
     try {
+      setLoading(true);
       const response = await loginUsuario({
         variables: {
           nombreUsuario,
@@ -40,7 +46,8 @@ export default function Index() {
       const token = response?.data?.loginUsuario;
 
       if (!token) {
-        alert('Nombre de usuario o contraseña incorrectos');
+        setMensajeError('Nombre de usuario o contraseña incorrectos');
+        setLoading(false);
         return;
       }
 
@@ -50,9 +57,8 @@ export default function Index() {
         query: { nombreUsuario },
       });
 
-    } catch (error: unknown) {
-      console.error(error);
-      alert('No se pudo iniciar sesión. Verifica tus credenciales e inténtalo nuevamente.');
+    } catch (error) {
+      setMensajeError('No se pudo iniciar sesión. Verifica tus credenciales e inténtalo nuevamente.');
     }
   };
 
@@ -88,13 +94,24 @@ export default function Index() {
           />
 
           <ButtonRounded
-            text="Iniciar sesión"
-            className="bg-[#7C3785] w-[300px] text-white mt-2"
+            text={loading ? "Iniciando..." : "Iniciar sesión"}
+            className="bg-[#7C3785] w-[300px] text-white mt-2 flex items-center justify-center gap-2"
             type="submit"
+            disabled={loading}
           />
 
-         
+
+
         </form>
+        {mensajeError && (
+          <Alert variant="destructive" className="mt-4 max-w-xl">
+            <AlertCircleIcon className="h-5 w-5" />
+            <AlertTitle>Error</AlertTitle>
+            <AlertDescription>
+              {mensajeError}
+            </AlertDescription>
+          </Alert>
+        )}
       </div>
     </div>
   );
