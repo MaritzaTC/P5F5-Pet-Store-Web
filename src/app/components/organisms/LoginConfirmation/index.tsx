@@ -1,9 +1,17 @@
 import { useRouter } from 'next/router';
 import { TextTitle } from '../../atoms/Titles';
 import { ButtonCard3 } from '../../atoms/Buttons';
+import { useEffect } from 'react';
 
 export default function Index() {
   const router = useRouter();
+ 
+     useEffect(() => {
+        const token = localStorage.getItem('token');
+        if (!token) {
+          router.push('/login'); // Redirige si no hay token
+        }
+      }, [router]);
   const { nombreUsuario } = router.query;
 
   const handleClick = () => {
