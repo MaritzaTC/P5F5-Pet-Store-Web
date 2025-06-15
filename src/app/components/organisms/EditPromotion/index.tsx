@@ -47,6 +47,7 @@ export default function index() {
   const [categoria, setCategoria] = useState('');
 const [fechaInicio, setFechaInicio] = useState<string | Date>('');
 const [fechaFin, setFechaFin] = useState<string | Date>('');
+const [isSubmitting, setIsSubmitting] = useState(false);
 
   const [porcentajeDescuento, setPorcentajeDescuento] = useState('');
   const [producto, setProducto] = useState('');
@@ -83,7 +84,8 @@ const [mostrarDialogo, setMostrarDialogo] = useState(false);
 
 
   const handleGuardar = async () => {
-     
+       if (isSubmitting) return; // evita múltiples clics rápidos
+       setIsSubmitting(true);
         const promocionesActivas = promocionesData?.promociones?.filter((promo: { activa: boolean }) => promo.activa);
 
 
@@ -161,7 +163,9 @@ const [mostrarDialogo, setMostrarDialogo] = useState(false);
       console.error(err);
       setMensajeError('Error al actualizar la promoción.');
       setMensajeExito('');
-    }
+    }finally {
+    setIsSubmitting(false);
+  }
   };
 
   const handleCancelar = () => {
@@ -190,7 +194,6 @@ const [mostrarDialogo, setMostrarDialogo] = useState(false);
           <TextTitle text='Editar promoción' />
           <form className='flex flex-col gap-4 mt-10 justify-between' onSubmit={(e) => {
             e.preventDefault();
-            handleGuardar();
           }}>
             <div className='flex items-center gap-4 w-full max-w-md'>
               <TextRegular7 text='Categoría' />
