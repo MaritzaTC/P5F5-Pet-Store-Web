@@ -94,7 +94,7 @@ export default function Index() {
        
         </form>
         {loading && <Icon icon="tabler:loader" className="animate-spin text-purple-700" width={24} height={24} />}
-        {error && <p>Error al crear usuario, inténtelo de nuevo</p>}
+        {error && <p>Error al crear usuario, inténtelo de nuevo. El Usuario ya existe</p>}
       </div>
     </div>
   );
