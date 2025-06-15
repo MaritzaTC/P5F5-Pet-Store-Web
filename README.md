@@ -36,7 +36,7 @@ El módulo permite crear, administrar y monitorear promociones comerciales con e
 ## 🚧 Funcionalidades no implementadas aún
 
 - 📦 **Gestión de Inventario**  
-  No hay integración con el inventario de productos.Entonces los del back, crearon un enpoint de productos. 
+  Actualmente no existe una integración real con el sistema de inventario de productos.Para facilitar el desarrollo y pruebas del frontend, el equipo de backend expuso un endpoint provisional para crear productos mock con fines de desarrollo.
 
 - 📢 **Notificaciones automáticas**  
   No se han implementado notificaciones por correo o mensaje de texto.
@@ -48,7 +48,6 @@ El módulo permite crear, administrar y monitorear promociones comerciales con e
 - **Frontend:** [Next.js](https://nextjs.org)
 - **Lenguaje:** TypeScript
 - **Estilos:** Tailwind CSS
-- **Autenticación:** Middleware de Next.js
 - **Consumo de datos:** [Apollo Client](https://www.apollographql.com/docs/react/) + GraphQL
 - **Backend:** Integrado con API GraphQL personalizada
 - **Despliegue:** [Vercel](https://vercel.com)
