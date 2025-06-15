@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable react-hooks/rules-of-hooks */
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { TextRegular, TextRegular2, TextTitle } from '../../atoms/Titles'
 import { GreaterIcon } from '../../atoms/Icons';
 import { CreateInput, CreateInput3 } from '../../molecules/MiniCard';
@@ -13,9 +13,18 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { AlertCircleIcon } from 'lucide-react';
 import { GET_PROMOCIONES } from '@/app/api/graphql/querys/promotions';
 import Link from 'next/dist/client/link';
+import { useRouter } from 'next/dist/client/router';
 
 
 const index = () => {
+   const router = useRouter();
+  
+    useEffect(() => {
+      const token = localStorage.getItem('token');
+      if (!token) {
+        router.push('/login'); // Redirige si no hay token
+      }
+    }, [router]);
   const { data: promocionesData } = useQuery(GET_PROMOCIONES);
 
 
