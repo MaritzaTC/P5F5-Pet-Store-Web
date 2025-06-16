@@ -15,12 +15,9 @@ import Link from 'next/dist/client/link'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { AlertCircleIcon } from 'lucide-react'
 import { GET_PROMOCION_BY_ID, GET_PROMOCIONES } from '@/app/api/graphql/querys/promotions'
-import { set } from 'date-fns'
-import { se } from 'date-fns/locale'
 import { useRouter } from 'next/router'
 import {
   Dialog,
-  DialogTrigger,
   DialogContent,
   DialogHeader,
   DialogTitle,
@@ -42,7 +39,7 @@ export default function index() {
   const { id } = router.query;
 
   // Estados
-   const [selectedOption, setSelectedOption] = useState('');
+  
   const [titulo, setTitulo] = useState('');
   const [categoria, setCategoria] = useState('');
 const [fechaInicio, setFechaInicio] = useState<string | Date>('');
@@ -84,24 +81,20 @@ const [mostrarDialogo, setMostrarDialogo] = useState(false);
 
 
   const handleGuardar = async () => {
-       if (isSubmitting) return; // evita múltiples clics rápidos
-       setIsSubmitting(true);
+     
         const promocionesActivas = promocionesData?.promociones?.filter((promo: { activa: boolean }) => promo.activa);
 
 
       
         const productoYaTienePromo = promocionesActivas?.some((promo: any) =>
-            promo.categoria === selectedOption &&
+           promo.id !== id &&
+            promo.categoria === categoria  &&
          
             promo.productos.some((p: any) => p.productoId === producto)
         );
 
 
-        if (productoYaTienePromo) {
-            setMensajeError("Este producto ya tiene una promoción activa.");
-            setTimeout(() => setMensajeError(''), 5000);
-            return;
-        }
+        
         console.log("Intentando crear promoción...");
         const descuento = parseInt(porcentajeDescuento);
 
@@ -164,7 +157,7 @@ const [mostrarDialogo, setMostrarDialogo] = useState(false);
       setMensajeError('Error al actualizar la promoción.');
       setMensajeExito('');
     }finally {
-    setIsSubmitting(false);
+  
   }
   };
 
@@ -194,6 +187,7 @@ const [mostrarDialogo, setMostrarDialogo] = useState(false);
           <TextTitle text='Editar promoción' />
           <form className='flex flex-col gap-4 mt-10 justify-between' onSubmit={(e) => {
             e.preventDefault();
+            handleGuardar();
           }}>
             <div className='flex items-center gap-4 w-full max-w-md'>
               <TextRegular7 text='Categoría' />
@@ -251,7 +245,7 @@ const [mostrarDialogo, setMostrarDialogo] = useState(false);
 />
             <div className='flex justify-between w-full max-w-md mt-6'>
               <ButtonRounded3 text='Cancelar' className='text-[#F13434] border-[#F13434] border-1 text-bold' onClick={handleCancelar} />
-              <ButtonRounded3 text='Guardar Cambios' className='bg-[#00B22F] text-white text-bold border-none w-[200px] ' onClick={handleGuardar} />
+              <ButtonRounded3 text='Guardar Cambios' className='bg-[#00B22F] text-white text-bold border-none w-[200px] ' onClick={handleGuardar}  />
             </div>
           </form>
 
