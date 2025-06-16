@@ -22,7 +22,7 @@ export const Dropdown: React.FC<DropdownProps> = ({ label, name, options, value,
                 required
                 className="border-1 border-[#E4E4E7] rounded-md p-2  focus:border-[#7C3785]  outline-none"
             >
-              <option value="">{placeholder || 'Seleccionar'}</option>
+              <option value="">{placeholder ?? 'Seleccionar'}</option>
                 {options.map((opt) => (
                     <option key={opt} value={opt}>
                         {opt}

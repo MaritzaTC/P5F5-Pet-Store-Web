@@ -1,10 +1,8 @@
 import React from 'react'
-import { TextRegular, TextRegular2, TextTitle2 } from '../../atoms/Titles'
+import { TextRegular, TextRegular2, TextTitle2, TextRegular8, TextRegular9 } from '../../atoms/Titles'
 import { GreaterIcon } from '../../atoms/Icons';
 import { CreateBox2 } from '../../molecules/SelectionBoxes';
 import { ButtonRounded3 } from '../../atoms/Buttons';
-import { TextRegular8 } from '../../atoms/Titles';
-import { TextRegular9 } from '../../atoms/Titles';
 
 const index = () => {
   return (

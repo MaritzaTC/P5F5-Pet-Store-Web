@@ -29,7 +29,7 @@ const GreaterIcon = () => {
 
 const PersonIcon= ({ icon }: { icon: string }) => {
     return (
-        <div className="flex justify-center items-center text-amber-400">
+        <div className="flex justify-center items-center">
             <Icon icon={icon} width="24" height="24" className="text-black"/>
         </div>
     );
@@ -55,8 +55,8 @@ const CardIconImg= ({ url }: { url: string }) => {
 
 const DateIcon= ({ icon }: { icon: string }) => {
     return (
-        <div className="flex justify-center items-center text-amber-400">
-            <Icon icon={icon} width="24" height="24" className="text-black"/>
+        <div className="flex justify-center items-center">
+            <Icon icon={icon} width="24" height="24" className="text-gray-500"/>
         </div>
     );
 }

@@ -20,7 +20,6 @@ const index = ({text}: {text: string}) => {
                 pl-4"
                 placeholder="dd/mm/yyyy"
             />
-            <div id="datepicker-inline" inline-datepicker data-date="02/25/2024"></div>
             </div>
         </div>
     </div>

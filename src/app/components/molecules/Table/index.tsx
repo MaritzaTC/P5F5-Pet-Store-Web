@@ -1,6 +1,7 @@
 import React from 'react'
 const data = [
     {
+        id: 'promo-1',
         status: 'Inactivo',
         name: 'Promocion 1',
         product: 'Producto',
@@ -10,7 +11,8 @@ const data = [
         button: '...',
     },
     {
-status: 'Activo',
+        id: 'promo-2',
+        status: 'Activo',
         name: 'Promocion 2',
         product: 'Producto',
         discount: '1%',
@@ -19,6 +21,7 @@ status: 'Activo',
         button: '...',
     },
     {
+        id: 'promo-3',
         status: 'Inactivo',
         name: 'Promocion 3',
         product: 'Producto',
@@ -28,6 +31,7 @@ status: 'Activo',
         button: '...',
     },
     {
+        id: 'promo-4',
         status: 'Activo',
         name: 'Promocion 4',
         product: 'Producto',
@@ -37,6 +41,7 @@ status: 'Activo',
         button: '...',
     },
     {
+        id: 'promo-5',
         status: 'Activo',
         name: 'Promocion 5',
         product: 'Producto',
@@ -65,8 +70,8 @@ export default function Index() {
           </tr>
         </thead>
         <tbody>
-          {data.map((item, index) => (
-            <tr key={index} className="text-center">
+          {data.map((item) => (
+            <tr key={item.id} className="text-center">
               <td className="border border-[#E4E4E7] py-4 ">{item.status}</td>
               <td className="border border-[#E4E4E7] py-2 ">{item.name}</td>
               <td className="border border-[#E4E4E7] py-2 ">{item.product}</td>
